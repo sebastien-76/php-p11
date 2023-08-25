@@ -1,5 +1,7 @@
 <?php
 
+require __DIR__.'/../vendor/autoload.php';
+
 session_start();
 
 if (($_POST['password'] ?? '') === '123') {
@@ -8,9 +10,6 @@ if (($_POST['password'] ?? '') === '123') {
     $_SESSION['auth'] = true;
     header('LOCATION: private-page.php', true, 302);
     exit();
-} else {
-    //l'utilisateur n'a pasrenseigné le bon mot de passe
-    $_SESSION['auth'] = false;
 }
 
 ?><!DOCTYPE html>

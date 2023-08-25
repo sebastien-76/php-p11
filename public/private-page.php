@@ -1,9 +1,14 @@
+<?php
 
+require __DIR__.'/../vendor/autoload.php';
 
 session_start();
 
-if (($_SESSION['auth'] ?? false) == false) {
-    // si l'utilisateur n'est pas authentifié, on le renvoie vers la page d'accueil
+/*  if (!isset($_SESSION['auth']) || $_SESSION['auth'] != true) {
+
+}*/
+
+if (($_SESSION['auth'] ?? null) != true) {
     header('LOCATION: login.php', true, 302);
     exit();
 }

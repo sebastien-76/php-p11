@@ -1,0 +1,20 @@
+{
+    "name": "sebastien-76/php-p11",
+    "type": "project",
+    "authors": [
+        {
+            "name": "sebastien",
+            "email": "sebastien.maillet@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "require": {
+        "symfony/var-dumper": "^5.4"
+    }
+}
+
+
